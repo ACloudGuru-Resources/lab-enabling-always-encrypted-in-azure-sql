@@ -30,26 +30,6 @@ try {
     Write-Log -Value $_ -Level "Error"
 }
 
-#  # Download SQL Server Management Studio
-# try {
-#     Invoke-WebRequest -Uri "https://aka.ms/ssmsfullsetup" -UseBasicParsing -OutFile "$($env:ProgramData)\SSMS-Setup-ENU.exe";
-#     Write-Log -Value "Downloaded SSMS "
-# }
-# catch {
-#     Write-Log -Value "Could not download SSMS" -Level "Error"
-#     Write-Log -Value $_ -Level "Error"
-# }
-
-#  # Install SQL Server Management Studio
-# try {
-#     Start-Process -FilePath "$($env:ProgramData)\SSMS-Setup-ENU.exe" -ArgumentList @('/install', '/quiet', '/norestart', 'DoNotInstallAzureDataStudio=1') -Wait;
-#     Write-Log -Value "Installed SQL Server Management Studio"
-# }
-# catch {
-#     Write-Log -Value "Could not SQL Server Management Studio" -Level "Error"
-#     Write-Log -Value $_ -Level "Error"
-# }
-
  # Create SSMS Desktop Shortcut
 try {
     Copy-Item -Path "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft SQL Server Tools 18\Microsoft SQL Server Management Studio 18.lnk" -Destination "C:\Users\Public\Desktop\Microsoft SQL Server Management Studio.lnk" -Force
